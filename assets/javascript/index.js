@@ -28,14 +28,14 @@ class Game{
     if (this.isWinningMove() || this.isDraw()) return true;
   }
 
-  isDraw = () => {
+  isDraw(){
     if (this.moveCount == 9 && !this.isWinningMove()){
       return true;
     }
     return false;
   }
 
-  move = (square) => {
+  move(square){
     if (this.gameOver()) return;
     let currentPlayer = this.currentPlayer;
     this.board.currentBoard[square] = currentPlayer.marker;
@@ -49,7 +49,7 @@ class Game{
     this.renderBoard(this.currentPlayer);
   }
 
-  renderBoard = (currentPlayer) => {
+  renderBoard(currentPlayer){
     let count = 0;
     const display = document.querySelector('#display');
     const gameBoard = document.querySelector('.board')
@@ -72,32 +72,32 @@ class Game{
     
   }
 
-  diagonalWin = () => {
+  diagonalWin(){
     if (this.board.currentBoard[0] == this.board.currentBoard[4] && this.board.currentBoard[4] == this.board.currentBoard[8] && this.board.currentBoard[0] != '-') return true;
     if (this.board.currentBoard[2] == this.board.currentBoard[4] && this.board.currentBoard[4] == this.board.currentBoard[6] && this.board.currentBoard[2] != '-') return true;
     return false;  
   }
 
-  verticalWin = () => {
+  verticalWin(){
     if (this.board.currentBoard[0] == this.board.currentBoard[3] && this.board.currentBoard[3] == this.board.currentBoard[6] && this.board.currentBoard[0] != '-') return true;
     if (this.board.currentBoard[1] == this.board.currentBoard[4] && this.board.currentBoard[4] == this.board.currentBoard[7] && this.board.currentBoard[1] != '-') return true;
     if (this.board.currentBoard[2] == this.board.currentBoard[5] && this.board.currentBoard[5] == this.board.currentBoard[8] && this.board.currentBoard[2] != '-') return true;
     return false;  
   }
 
-  horizontalWin = () => {
+  horizontalWin(){
     if (this.board.currentBoard[0] == this.board.currentBoard[1] && this.board.currentBoard[1] == this.board.currentBoard[2] && this.board.currentBoard[0] != '-') return true;
     if (this.board.currentBoard[3] == this.board.currentBoard[4] && this.board.currentBoard[4] == this.board.currentBoard[5] && this.board.currentBoard[3] != '-') return true;
     if (this.board.currentBoard[6] == this.board.currentBoard[7] && this.board.currentBoard[7] == this.board.currentBoard[8] && this.board.currentBoard[6] != '-') return true;
     return false;  
   }
 
-  isWinningMove = () => {
+  isWinningMove(){
     if(this.horizontalWin() || this.verticalWin() || this.diagonalWin()) return true;
     return false;
   }
 
-  isValidMove = (square) => {
+  isValidMove(square){
     if (this.board.currentBoard[square] === '-') return true;  
     return false;
   }
