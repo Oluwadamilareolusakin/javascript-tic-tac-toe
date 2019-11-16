@@ -131,3 +131,8 @@ const requestMove = (square) => {
    game.move(square);
   }
 }
+
+const reset = () => {
+  game = new Game();
+  game.renderBoard(game.currentPlayer);
+} 
