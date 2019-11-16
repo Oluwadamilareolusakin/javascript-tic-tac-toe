@@ -96,5 +96,10 @@ class Game{
     if(this.horizontalWin() || this.verticalWin() || this.diagonalWin()) return true;
     return false;
   }
+
+  isValidMove = (square) => {
+    if (this.board.currentBoard[square] === '-') return true;  
+    return false;
+  }
 }
 
