@@ -24,6 +24,10 @@ class Game{
     this.renderBoard(this.currentPlayer);
   }
 
+  gameOver = () => {
+    if (this.isWinningMove() || this.isDraw()) return true;
+  }
+
   
 }
 
