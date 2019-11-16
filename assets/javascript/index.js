@@ -28,6 +28,11 @@ class Game{
     if (this.isWinningMove() || this.isDraw()) return true;
   }
 
-  
+  isDraw = () => {
+    if (this.moveCount == 9 && !this.isWinningMove()){
+      return true;
+    }
+    return false;
+  }
 }
 
