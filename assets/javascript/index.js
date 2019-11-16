@@ -12,3 +12,18 @@ const player = (name) => {
   return {getName, symbol};
 }
 
+class Game{
+  constructor(name1, name2){
+    this.player1 = player(name1);
+    this.player2 = player(name2);
+    this.player1.marker = 'X';
+    this.player2.marker = 'O';
+    this.currentPlayer = this.player1;
+    this.board = new Board();
+    this.moveCount = 0;
+    this.renderBoard(this.currentPlayer);
+  }
+
+  
+}
+
