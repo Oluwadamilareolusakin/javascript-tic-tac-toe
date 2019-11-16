@@ -56,7 +56,7 @@ class Game{
     if (this.isWinningMove()){
       display.innerHTML = `<p>${currentPlayer.getName()} won! Play again?</p>`;   
       
-    } else if(this.isDraw()){
+    } else if (this.isDraw()) {
       display.innerHTML = `<p>It's a draw! No winners here, only those who lost at winning</p>`;
     } else {
       display.innerHTML = `<p>${currentPlayer.getName()}'s turn to play</p>`;
