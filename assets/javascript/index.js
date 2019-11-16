@@ -120,3 +120,8 @@ const newGame = () => {
   const modal = document.querySelector('.form-holder');
   modal.classList.toggle('closed');
 }
+
+const toggleModal = () => {
+  const modal = document.querySelector('.form-holder');
+  modal.classList.toggle('closed');
+}
