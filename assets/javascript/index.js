@@ -34,5 +34,19 @@ class Game{
     }
     return false;
   }
+  
+  move = (square) => {
+    if (this.gameOver()) return;
+    let currentPlayer = this.currentPlayer;
+    this.board.currentBoard[square] = currentPlayer.marker;
+    if (this.isWinningMove()){
+      this.renderBoard(currentPlayer);
+      return;
+    }
+    if (currentPlayer == this.player1) this.currentPlayer = this.player2;
+    if (currentPlayer == this.player2) this.currentPlayer = this.player1;
+    this.moveCount++
+    this.renderBoard(this.currentPlayer);
+  }
 }
 
