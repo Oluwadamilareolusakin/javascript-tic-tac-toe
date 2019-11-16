@@ -125,3 +125,9 @@ const toggleModal = () => {
   const modal = document.querySelector('.form-holder');
   modal.classList.toggle('closed');
 }
+
+const requestMove = (square) => {
+  if (game.isValidMove(square)){
+   game.move(square);
+  }
+}
