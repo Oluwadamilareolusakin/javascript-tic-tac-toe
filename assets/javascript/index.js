@@ -103,3 +103,15 @@ class Game{
   }
 }
 
+const startGame = (e) => {
+  e.preventDefault();
+  const players = document.querySelector('.player-details-form');
+  name1 = players[0].value;
+  name2 = players[1].value;
+  if (name2 === '' || name1 === ''){
+    alert('Enter valid player names');
+    return;
+  }
+  game = new Game(name1, name2);
+  toggleModal();
+}
