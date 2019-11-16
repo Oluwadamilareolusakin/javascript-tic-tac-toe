@@ -84,5 +84,12 @@ class Game{
     if (this.board.currentBoard[2] == this.board.currentBoard[5] && this.board.currentBoard[5] == this.board.currentBoard[8] && this.board.currentBoard[2] != '-') return true;
     return false;  
   }
+  
+  horizontalWin = () => {
+    if (this.board.currentBoard[0] == this.board.currentBoard[1] && this.board.currentBoard[1] == this.board.currentBoard[2] && this.board.currentBoard[0] != '-') return true;
+    if (this.board.currentBoard[3] == this.board.currentBoard[4] && this.board.currentBoard[4] == this.board.currentBoard[5] && this.board.currentBoard[3] != '-') return true;
+    if (this.board.currentBoard[6] == this.board.currentBoard[7] && this.board.currentBoard[7] == this.board.currentBoard[8] && this.board.currentBoard[6] != '-') return true;
+    return false;  
+  }
 }
 
