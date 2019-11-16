@@ -34,7 +34,7 @@ class Game{
     }
     return false;
   }
-  
+
   move = (square) => {
     if (this.gameOver()) return;
     let currentPlayer = this.currentPlayer;
@@ -47,6 +47,29 @@ class Game{
     if (currentPlayer == this.player2) this.currentPlayer = this.player1;
     this.moveCount++
     this.renderBoard(this.currentPlayer);
+  }
+
+  renderBoard = (currentPlayer) => {
+    let count = 0;
+    const display = document.querySelector('#display');
+    const gameBoard = document.querySelector('.board')
+    if (this.isWinningMove()){
+      display.innerHTML = `<p>${currentPlayer.getName()} won! Play again?</p>`;   
+      
+    } else if(this.isDraw()){
+      display.innerHTML = `<p>It's a draw! No winners here, only those who lost at winning</p>`;
+    } else {
+      display.innerHTML = `<p>${currentPlayer.getName()}'s turn to play</p>`;
+    }
+  
+    const squares = this.board.currentBoard.map((square) => 
+      `<div class = 'square row' onclick = 'requestMove(${count++})'>
+          ${square}
+        </div>`
+        ).join('')
+        
+    gameBoard.innerHTML = squares;
+    
   }
 }
 
