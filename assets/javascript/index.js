@@ -71,5 +71,11 @@ class Game{
     gameBoard.innerHTML = squares;
     
   }
+
+  diagonalWin = () => {
+    if (this.board.currentBoard[0] == this.board.currentBoard[4] && this.board.currentBoard[4] == this.board.currentBoard[8] && this.board.currentBoard[0] != '-') return true;
+    if (this.board.currentBoard[2] == this.board.currentBoard[4] && this.board.currentBoard[4] == this.board.currentBoard[6] && this.board.currentBoard[2] != '-') return true;
+    return false;  
+  }
 }
 
