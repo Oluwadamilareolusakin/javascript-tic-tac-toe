@@ -35,6 +35,12 @@ class Game{
     return false;
   }
 
+  reset(){
+    this.board.currentBoard = ['-','-','-','-','-','-','-','-','-'];
+    this.moveCount = 0;
+    this.renderBoard(this.player1);
+  }
+
   move(square){
     if (this.gameOver()) return;
     let currentPlayer = this.currentPlayer;
@@ -48,7 +54,7 @@ class Game{
     this.moveCount++
     this.renderBoard(this.currentPlayer);
   }
-
+  
   renderBoard(currentPlayer){
     let count = 0;
     const display = document.querySelector('#display');
@@ -133,6 +139,5 @@ const requestMove = (square) => {
 }
 
 const reset = () => {
-  game = new Game();
-  game.renderBoard(game.currentPlayer);
+  game.reset()
 }
