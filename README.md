@@ -12,7 +12,7 @@ It allows you play Tic-Tac-Toe games against another human being.
 
 ## Live Demo
 
-[Live Demo](https://rawcdn.githack.com/Oluwadamilareolusakin/javascript-book-library/b54d884606ee0577e0fda4f49123b0d40a7608bb/views/index.html)
+[Live Demo](https://raw.githack.com/Oluwadamilareolusakin/javascript-tic-tac-toe/master/views/index.html)
 
 ## Getting Started
 
