@@ -1,7 +1,9 @@
 # Javascript Tic-Tac-Toe
 A Tic-Tac-Toe game written in ES6
 
-![screenshot](assets/images/Screenshot%20from%202019-11-18%2014-09-29.png)
+![screenshot](https://github.com/Oluwadamilareolusakin/javascript-tic-tac-toe/blob/master/assets/images/Screenshot%20from%202019-12-06%2014-58-29.png)
+![screenshot](https://github.com/Oluwadamilareolusakin/javascript-tic-tac-toe/blob/master/assets/images/Screenshot%20from%202019-12-06%2014-58-22.png)
+![screenshot](https://github.com/Oluwadamilareolusakin/javascript-tic-tac-toe/blob/master/assets/images/Screenshot%20from%202019-12-06%2014-58-14.png)
 
 # What it does
 It allows you play Tic-Tac-Toe games against another human being.
