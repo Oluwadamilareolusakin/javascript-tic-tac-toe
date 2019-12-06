@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+main {
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #0bc297;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/1.svg"); }
+
+.row {
+  display: flex;
+  flex-flow: row wrap; }
+
+.column {
+  display: flex;
+  flex-flow: column nowrap; }
+
+.display {
+  margin-bottom: 2em;
+  background-color: salmon;
+  border-radius: 5px;
+  padding: 1em 2em;
+  color: white; }
+
+.board {
+  width: 50%;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  justify-content: center;
+  background-color: #353535; }
+  .board .square {
+    width: 33.1%;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    height: 100px;
+    justify-content: center;
+    align-items: center; }
+
+.form-holder {
+  position: absolute;
+  background-color: #008d9c;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center; }
+  .form-holder .column {
+    width: 100%;
+    align-items: center;
+    justify-content: center; }
+    .form-holder .column h1 {
+      color: white; }
+  .form-holder .player-details-form {
+    width: 40%; }
+    .form-holder .player-details-form input {
+      width: 100%;
+      padding: 1em;
+      border: none;
+      border-radius: 5px; }
+    .form-holder .player-details-form input[type='submit'] {
+      background-color: #00ad68;
+      color: white; }
+    .form-holder .player-details-form .fields {
+      margin-top: 1em; }
+
+.closed {
+  display: none; }
+
+.heading, .square {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1em;
+  text-align: center; }
+
+.game-actions {
+  margin-top: 1em;
+  justify-content: center; }
+  .game-actions .game-action {
+    margin-right: 1em; }
+  .game-actions .reset {
+    background-color: salmon;
+    transition: .25s; }
+    .game-actions .reset:hover {
+      background-color: #ff614f; }
+  .game-actions .new-game {
+    background-color: #007e80; }
+    .game-actions .new-game:hover {
+      background-color: #005e5f;
+      transition: .25s; }
+  .game-actions .reset, .game-actions .new-game {
+    border: none;
+    color: white;
+    padding: 1em 2em;
+    border-radius: 5px;
+    cursor: pointer; }
+
+/*# sourceMappingURL=index.css.map */

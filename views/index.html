@@ -1,0 +1,39 @@
+<!Doctype>
+<html>
+  <head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="../assets/stylesheets/index.css">
+    <script src="../assets/javascript/index.js"></script>
+  </head>
+
+  <body>
+    <main class="column">
+      <div id="display" class="display heading">
+
+      </div>
+      <div class="board row">
+      </div>
+
+      <div class="row game-actions">
+        <button onclick="reset()" class="game-action reset">Reset</button>
+        <button onclick="newGame()" class="game-action new-game">New Game</button>
+      </div>
+    </main>
+    <div class="form-holder row">
+      <div class="column">
+        <h1 class="heading">Start a mighty fine game of Tic Tac Toe</h1>
+        <form action="#" method="post" class="player-details-form">
+          <div class="fields">
+            <input type="text" placeholder="First player's name">
+          </div>
+          <div class="fields">
+            <input type="text" placeholder="Second player's name">
+          </div>
+          <div class="actions fields">
+            <input type="submit" Value="Start Game" onclick="startGame(event)">
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
